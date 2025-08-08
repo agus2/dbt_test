@@ -40,3 +40,22 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+    stg:
+      +schema: stg
+      +materialized: view
+    int:
+      +schema: int
+      +materialized: view
+    dim:
+      +schema: dim
+      +materialized: table
+    fct:
+      +schema: fact
+      +materialized: table
+    marts:
+      +schema: marts
+      +materialized: table
+
+vars:
+  job_run_id: 'dev_test_run_agus'
+  job_run_date: '2025-08-08'
